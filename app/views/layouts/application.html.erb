@@ -35,6 +35,7 @@
       <div>
         <a href="/articles">Articles</a>
         <%= link_to "New Article", new_article_path %>
+        <%= link_to "Logout", destroy_user_session_path, method: :delete, data: { turbo_confirm: "Are you sure you want to logout?", turbo_method: :delete } %>
       </div>
     </div>
     <%= yield %>
